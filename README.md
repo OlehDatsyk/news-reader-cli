@@ -1,6 +1,6 @@
 # 📰 News Reader CLI
 
-A professional, terminal-based news reader built with Python. Search for news by keyword, browse top headlines by country or category, and read beautifully formatted articles — all from your terminal, powered by [NewsAPI.org](https://newsapi.org) and [Rich](https://github.com/Textualize/rich).
+A professional, terminal-based news reader built with Python. Search for news by keyword, browse top headlines by country or category, and read beautifully formatted articles - all from your terminal, powered by [NewsAPI.org](https://newsapi.org) and [Rich](https://github.com/Textualize/rich).
 
 This README is written for someone who has **never run a Python project before** and has **only installed Visual Studio Code**. Follow it from top to bottom and you will end up with a fully working application. No prior experience is assumed.
 
@@ -9,17 +9,17 @@ This README is written for someone who has **never run a Python project before**
 ## Table of Contents
 
 1. [What You Need Before Starting](#1-what-you-need-before-starting)
-2. [Step 1 — Install Python](#step-1--install-python)
-3. [Step 2 — Install Git (Optional but Recommended)](#step-2--install-git-optional-but-recommended)
-4. [Step 3 — Get the Project Files into VS Code](#step-3--get-the-project-files-into-vs-code)
-5. [Step 4 — Open the Project in VS Code](#step-4--open-the-project-in-vs-code)
-6. [Step 5 — Open the VS Code Terminal](#step-5--open-the-vs-code-terminal)
-7. [Step 6 — Create a Virtual Environment](#step-6--create-a-virtual-environment)
-8. [Step 7 — Activate the Virtual Environment](#step-7--activate-the-virtual-environment)
-9. [Step 8 — Install Project Dependencies](#step-8--install-project-dependencies)
-10. [Step 9 — Get a Free NewsAPI.org API Key](#step-9--get-a-free-newsapiorg-api-key)
-11. [Step 10 — Set Up Your `.env` File](#step-10--set-up-your-env-file)
-12. [Step 11 — Run the Application](#step-11--run-the-application)
+2. [Step 1 - Install Python](#step-1--install-python)
+3. [Step 2 - Install Git (Optional but Recommended)](#step-2--install-git-optional-but-recommended)
+4. [Step 3 - Get the Project Files into VS Code](#step-3--get-the-project-files-into-vs-code)
+5. [Step 4 - Open the Project in VS Code](#step-4--open-the-project-in-vs-code)
+6. [Step 5 - Open the VS Code Terminal](#step-5--open-the-vs-code-terminal)
+7. [Step 6 - Create a Virtual Environment](#step-6--create-a-virtual-environment)
+8. [Step 7 - Activate the Virtual Environment](#step-7--activate-the-virtual-environment)
+9. [Step 8 - Install Project Dependencies](#step-8--install-project-dependencies)
+10. [Step 9 - Get a Free NewsAPI.org API Key](#step-9--get-a-free-newsapiorg-api-key)
+11. [Step 10 - Set Up Your `.env` File](#step-10--set-up-your-env-file)
+12. [Step 11 - Run the Application](#step-11--run-the-application)
 13. [Using the Application](#using-the-application)
 14. [Project Structure](#project-structure)
 15. [Expected Terminal Output Examples](#expected-terminal-output-examples)
@@ -36,18 +36,18 @@ This README is written for someone who has **never run a Python project before**
 - An internet connection (to install Python packages and call the News API).
 - About 15 minutes.
 
-You do **not** need to know how to code to follow this guide — just copy and paste the commands exactly as shown.
+You do **not** need to know how to code to follow this guide - just copy and paste the commands exactly as shown.
 
 ---
 
-## Step 1 — Install Python
+## Step 1 - Install Python
 
 This project requires **Python 3.12 or newer**.
 
 ### Check if Python is already installed
 
 1. Open VS Code.
-2. Open the built-in terminal: go to the top menu and click **Terminal → New Terminal** (or press `` Ctrl+` `` on Windows/Linux, `` Cmd+` `` on macOS).
+2. Open the built-in terminal: go to the top menu and click **Terminal -> New Terminal** (or press `` Ctrl+` `` on Windows/Linux, `` Cmd+` `` on macOS).
 3. In the terminal that appears at the bottom of VS Code, type the following and press **Enter**:
 
    ```bash
@@ -60,7 +60,7 @@ This project requires **Python 3.12 or newer**.
    python --version
    ```
 
-4. If you see something like `Python 3.12.4` or higher, you're done — skip to [Step 2](#step-2--install-git-optional-but-recommended).
+4. If you see something like `Python 3.12.4` or higher, you're done - skip to [Step 2](#step-2--install-git-optional-but-recommended).
 5. If you see an error like `command not found` or `'python' is not recognized`, you need to install Python (next section).
 
 ### Installing Python
@@ -91,7 +91,7 @@ Then verify with `python3 --version`.
 
 ---
 
-## Step 2 — Install Git (Optional but Recommended)
+## Step 2 - Install Git (Optional but Recommended)
 
 Git is only needed if you plan to clone this project from a repository (e.g., GitHub) instead of downloading a ZIP file. If you already have the project folder on your computer, you can **skip this step**.
 
@@ -105,7 +105,7 @@ Git is only needed if you plan to clone this project from a repository (e.g., Gi
 
 ---
 
-## Step 3 — Get the Project Files into VS Code
+## Step 3 - Get the Project Files into VS Code
 
 You should have a folder named `news-reader-cli/` containing all the project files (`main.py`, `news_service.py`, `config.py`, `utils.py`, `requirements.txt`, `README.md`, `.env.example`, `.gitignore`).
 
@@ -120,28 +120,28 @@ Make sure all files listed above are directly inside the `news-reader-cli` folde
 
 ---
 
-## Step 4 — Open the Project in VS Code
+## Step 4 - Open the Project in VS Code
 
 1. Open VS Code.
-2. Go to **File → Open Folder...** (macOS: **File → Open...**).
+2. Go to **File -> Open Folder...** (macOS: **File -> Open...**).
 3. Navigate to and select the `news-reader-cli` folder.
 4. Click **Select Folder** (or **Open** on macOS).
 5. You should now see all the project files listed in the **Explorer** panel on the left side of VS Code.
 
 ---
 
-## Step 5 — Open the VS Code Terminal
+## Step 5 - Open the VS Code Terminal
 
 All the remaining commands in this guide are typed into the **VS Code integrated terminal**, not a separate application.
 
-1. Open the menu **Terminal → New Terminal** at the top of VS Code.
+1. Open the menu **Terminal -> New Terminal** at the top of VS Code.
 2. A terminal panel will appear at the bottom, already pointed at your project folder (you should see `news-reader-cli` somewhere in the prompt).
 
 > 💡 Tip: If you ever get lost, run `pwd` (macOS/Linux) or `cd` (Windows) to see your current folder, and make sure it ends in `news-reader-cli`.
 
 ---
 
-## Step 6 — Create a Virtual Environment
+## Step 6 - Create a Virtual Environment
 
 A **virtual environment** is an isolated space for this project's Python packages, so they don't interfere with other projects on your machine. We'll create one called `venv`.
 
@@ -157,11 +157,11 @@ python -m venv venv
 python3 -m venv venv
 ```
 
-After a few seconds, a new `venv/` folder will appear in your project (you may need to click the refresh icon in the Explorer panel to see it). This is normal — it contains a private copy of Python and pip for this project only.
+After a few seconds, a new `venv/` folder will appear in your project (you may need to click the refresh icon in the Explorer panel to see it). This is normal - it contains a private copy of Python and pip for this project only.
 
 ---
 
-## Step 7 — Activate the Virtual Environment
+## Step 7 - Activate the Virtual Environment
 
 Activating the virtual environment tells your terminal to use the isolated Python/pip inside `venv/` instead of your system-wide installation.
 
@@ -187,11 +187,11 @@ source venv/bin/activate
 (venv) user@computer news-reader-cli %
 ```
 
-You'll need to activate the virtual environment every time you open a new terminal to work on this project. VS Code often does this automatically if it detects the `venv/` folder — but it's good to check.
+You'll need to activate the virtual environment every time you open a new terminal to work on this project. VS Code often does this automatically if it detects the `venv/` folder - but it's good to check.
 
 ---
 
-## Step 8 — Install Project Dependencies
+## Step 8 - Install Project Dependencies
 
 With the virtual environment activated (you should see `(venv)` in your prompt), install all required packages listed in `requirements.txt`:
 
@@ -200,9 +200,9 @@ pip install -r requirements.txt
 ```
 
 This installs:
-- **requests** — for making HTTP calls to the News API.
-- **rich** — for the colorful, professional terminal output.
-- **python-dotenv** — for loading your API key from the `.env` file.
+- **requests** - for making HTTP calls to the News API.
+- **rich** - for the colorful, professional terminal output.
+- **python-dotenv** - for loading your API key from the `.env` file.
 
 You should see output ending with something like:
 ```
@@ -213,30 +213,30 @@ Successfully installed requests-2.31.0 rich-13.7.1 python-dotenv-1.0.1 ...
 
 ---
 
-## Step 9 — Get a Free NewsAPI.org API Key
+## Step 9 - Get a Free NewsAPI.org API Key
 
 This application fetches real news using [NewsAPI.org](https://newsapi.org), which requires a free API key.
 
 1. Go to [https://newsapi.org/register](https://newsapi.org/register).
 2. Fill in the registration form (name, email, password) and submit it.
 3. Check your email if verification is required, then log in.
-4. Once logged in, go to your account page — your **API key** will be displayed. It looks something like:
+4. Once logged in, go to your account page - your **API key** will be displayed. It looks something like:
    ```
    a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
    ```
-5. Copy this key — you'll paste it into your `.env` file in the next step.
+5. Copy this key - you'll paste it into your `.env` file in the next step.
 
 > ⚠️ The free tier of NewsAPI.org has request limits (e.g., 100 requests/day and some restrictions on production use). This is perfectly fine for learning and personal use.
 
 ---
 
-## Step 10 — Set Up Your `.env` File
+## Step 10 - Set Up Your `.env` File
 
 Your API key is a secret and should **never** be typed directly into the code or committed to Git. Instead, it goes into a `.env` file that stays on your computer only.
 
 1. In the VS Code Explorer panel, find the file `.env.example`.
 2. Make a copy of it and rename the copy to exactly `.env` (no `.example` at the end). You can do this:
-   - **In VS Code:** Right-click `.env.example` → **Copy**, then right-click the folder → **Paste**, then rename the new file to `.env`.
+   - **In VS Code:** Right-click `.env.example` -> **Copy**, then right-click the folder -> **Paste**, then rename the new file to `.env`.
    - **Or via terminal:**
      ```bash
      # macOS/Linux
@@ -260,7 +260,7 @@ Your API key is a secret and should **never** be typed directly into the code or
 
 ---
 
-## Step 11 — Run the Application
+## Step 11 - Run the Application
 
 With your virtual environment activated and dependencies installed, run:
 
@@ -308,20 +308,20 @@ Each article is displayed with its **title, description, source, author, publish
 ```
 news-reader-cli/
 │
-├── main.py              # Application entry point — CLI menu, Rich UI, orchestration
-├── news_service.py       # NewsService class — all NewsAPI.org HTTP communication
+├── main.py              # Application entry point - CLI menu, Rich UI, orchestration
+├── news_service.py       # NewsService class - all NewsAPI.org HTTP communication
 ├── config.py              # Settings, environment loading, constants (categories/countries)
 ├── utils.py                # Input validation and text/date formatting helpers
 ├── requirements.txt         # Python package dependencies
 ├── .env.example               # Template for your local .env file (safe to commit)
-├── .env                         # Your real API key (created by you — never commit this)
+├── .env                         # Your real API key (created by you - never commit this)
 ├── .gitignore                    # Files/folders Git should ignore (.env, venv/, etc.)
 └── README.md                       # This guide
 ```
 
 **Why this structure?**
 - `config.py` centralizes all settings so there's a single source of truth.
-- `news_service.py` isolates all network/API logic — if NewsAPI.org changed its API, only this file would need updates.
+- `news_service.py` isolates all network/API logic - if NewsAPI.org changed its API, only this file would need updates.
 - `utils.py` keeps validation and formatting logic reusable and testable, separate from the UI.
 - `main.py` focuses purely on presentation and user interaction (Rich menus, prompts, panels).
 
